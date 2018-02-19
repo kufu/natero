@@ -34,7 +34,7 @@ module Natero
   end
 
   def self.api_key_uri
-    '?api_key=' + Natero.configuration.account_api_key
+    "?api_key=#{Natero.configuration.account_api_key}"
   end
 
   def self.to_records_json(objects)
