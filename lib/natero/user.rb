@@ -8,7 +8,7 @@ class Natero::User < Natero::Base
   end
 
   def self.bulk_insert_modify(accounts)
-    post([], json_data(Natero.to_records_json(accounts)))
+    post([], json_data({records: accounts}.to_json))
   end
 
   def self.modify(id, account)
