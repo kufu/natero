@@ -4,7 +4,7 @@ class Natero::Metric < Natero::Base
   end
 
   def self.bulk_insert_modify(metrics)
-    post([], json_data(Natero.to_records_json(metrics)))
+    post([], json_data({records: metrics}.to_json))
   end
 
   def self.modify(name, metric)
